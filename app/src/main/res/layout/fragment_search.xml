@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="SearchDataBinding">
+
+        <import type="android.view.View"/>
+
+        <variable
+                name="bindingModel"
+                type="com.example.textoutput_190120.presentation.fragments.search.SearchModelBinding" />
+
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/indentation_8"
+            tools:context="com.example.textoutput_190120.presentation.fragments.search.SearchFragment">
+
+        <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:hint="@string/hint_enter_user_name" />
+
+        <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:theme="@style/SearchButton"
+                android:text="@string/btn_search_for_repositories"
+                android:textColor="@color/colorWhite"
+                android:enabled="false"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+    </RelativeLayout>
+</layout>
+

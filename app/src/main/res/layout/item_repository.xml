@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+                name="data"
+                type="com.example.textoutput_190120.data.card_models.RepositoryDisplayModel" />
+
+        <variable
+                name="bindingModel"
+                type="com.example.textoutput_190120.presentation.fragments.repositories.RepositoryModelBinding" />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/indentation_16"
+                android:layout_marginEnd="@dimen/indentation_20"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/indentation_20"
+                android:paddingBottom="@dimen/indentation_20">
+
+            <TextView
+                    android:id="@+id/tvName"
+                    style="@style/TextStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/indentation_16"
+                    app:bindTextWithCheckContent="@{bindingModel.repositoryName}" />
+
+            <TextView
+                    android:id="@+id/tvRepoId"
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_label_24px"
+                    android:drawablePadding="@dimen/indentation_4"
+                    app:textSpan="@{bindingModel.repositoryId}"/>
+
+            <TextView
+                    android:id="@+id/tvRepoCreatedAtDate"
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/indentation_8"
+                    android:drawableStart="@drawable/ic_date_range_24px"
+                    android:drawablePadding="@dimen/indentation_4"
+                    app:dateSpan="@{bindingModel.createdAtDate}"
+                    app:timeSpan="@{bindingModel.createdAtTime}" />
+
+            <TextView
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/indentation_8"
+                    android:drawableStart="@drawable/ic_code_24px"
+                    android:drawablePadding="@dimen/indentation_4"
+                    app:textSpan="@{bindingModel.language}"/>
+
+            <TextView
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/indentation_6"
+                    android:layout_marginTop="@dimen/indentation_8"
+                    android:drawableStart="@drawable/ic_git_branch"
+                    android:drawablePadding="@dimen/indentation_7"
+                    app:textSpan="@{bindingModel.defaultBranch}" />
+
+            <TextView
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/indentation_8"
+                    android:drawableStart="@drawable/ic_description_24px"
+                    android:drawablePadding="@dimen/indentation_4"
+                    app:bindTextWithCheckContent="@{bindingModel.repositoryDescription}" />
+        </LinearLayout>
+
+        <include layout="@layout/divider_horizontal" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="@{(view)-> bindingModel.onRepositoryClicked(bindingModel.repositoryUrl)}"
+                    android:padding="@dimen/indentation_6"
+                    android:text="@string/txt_view_repository"
+                    android:textAlignment="center" />
+
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/colorBlack" />
+
+            <TextView
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="@{(view)-> bindingModel.onRepositoryClicked(bindingModel.commitsUrl)}"
+                    android:padding="@dimen/indentation_6"
+                    android:text="@string/txt_view_commits"
+                    android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <include layout="@layout/divider_horizontal" />
+
+    </LinearLayout>
+</layout>

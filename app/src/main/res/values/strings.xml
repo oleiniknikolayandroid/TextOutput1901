@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TextOutput_19.01.20</string>
+
+    <string name="empty_view_head">There is nothing here</string>
+    <string name="empty_view_bottom">You may want to enter another username</string>
+    <string name="common_error_msg_head">If you want to try again later</string>
+    <string name="common_error_msg_bottom">Something went wrong</string>
+
+    <string name="error_no_browser_found">No browser found - please install a valid web browser.</string>
+    <string name="hint_enter_user_name">Enter user name</string>
+    <string name="btn_search_for_repositories">Search for repositories</string>
+    <string name="app_title_search">Enter github username</string>
+    <string name="title_repository_screen">Repositories: %s</string>
+    <string name="txt_view_repository">View repository</string>
+    <string name="txt_view_commits">View commits</string>
+    <string name="txt_default_branch">Default branch:</string>
+    <string name="format_id">ID:</string>
+    <string name="format_date">Created:</string>
+    <string name="format_time"> at</string>
+    <string name="format_branch">Default branch:</string>
+    <string name="format_language">Language:</string>
+    <string name="exit_confirm">Are you sure you want to leave the app?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>

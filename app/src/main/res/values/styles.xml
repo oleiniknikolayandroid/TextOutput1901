@@ -1,0 +1,33 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="NoTittleBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="SearchButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorButtonNormal">@color/colorGreyishBrown</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:textSize">@dimen/txt_size_18</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorGreyishBrown</item>
+    </style>
+
+    <style name="TextStyle2">
+        <item name="android:textSize">@dimen/txt_size_34</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorGreyishBrown</item>
+    </style>
+</resources>
